@@ -1,0 +1,34 @@
+[Unit]
+Description=Oh My Pi owner-only Telegram Bot Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=omp-telegram
+Group=omp-telegram
+WorkingDirectory=/opt/oh-my-pi-tgbot
+EnvironmentFile=/opt/oh-my-pi-tgbot/.env
+Environment=NODE_ENV=production
+Environment=HOME=/var/lib/omp-telegram
+Environment=OMP_WORKSPACE_ROOT=/var/lib/omp-telegram/workspaces
+Environment=OMP_SESSION_ROOT=/var/lib/omp-telegram/sessions
+ExecStart=/usr/local/bin/bun run /opt/oh-my-pi-tgbot/src/index.ts
+Restart=always
+RestartSec=5
+StateDirectory=omp-telegram
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

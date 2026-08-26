@@ -1,0 +1,19 @@
+services:
+  omp-telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: omp-telegram-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    user: "1000:1000"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    volumes:
+      - omp_data:/home/bun/.omp
+
+volumes:
+  omp_data:

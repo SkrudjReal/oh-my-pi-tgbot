@@ -1,0 +1,49 @@
+# ============================================
+# Environment & Secrets (STRICTLY NEVER COMMIT)
+# ============================================
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+!.env.example
+*.pem
+*.key
+*.cert
+*.secret
+
+# ============================================
+# Dependencies & Package Managers
+# ============================================
+node_modules/
+bun.lockb
+
+# ============================================
+# Build Artifacts & Caches
+# ============================================
+dist/
+build/
+.cache/
+*.tsbuildinfo
+coverage/
+
+# ============================================
+# Runtime Downloads & Agent Working State
+# ============================================
+downloads/
+telegram-sessions/
+telegram-workspaces/
+.omp/
+*.log
+logs/
+
+# ============================================
+# IDE & System Files
+# ============================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

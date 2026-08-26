@@ -1,0 +1,11 @@
+.git
+.env
+.env.*
+!.env.example
+node_modules
+tests
+skills
+downloads
+.omp
+*.log
+coverage

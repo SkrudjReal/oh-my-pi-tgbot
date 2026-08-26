@@ -1,0 +1,22 @@
+{
+  "name": "oh-my-pi-tgbot",
+  "version": "1.0.0",
+  "description": "⚡ Universal Telegram Bot & Streaming Bridge for Oh My Pi (omp) AI Coding Agent with strict middleware ACL, live tool badges, and Telegram Premium formatting",
+  "main": "src/index.ts",
+  "type": "module",
+  "bin": {
+    "omp-tgbot": "src/index.ts"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "engines": {
+    "bun": ">=1.3.14"
+  }
+}

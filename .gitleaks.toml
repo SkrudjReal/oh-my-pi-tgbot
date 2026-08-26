@@ -1,0 +1,9 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Local runtime secrets are intentionally untracked"
+paths = [
+  '''(^|/)\.env$''',
+  '''(^|/)node_modules/''',
+]
